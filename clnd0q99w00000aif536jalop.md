@@ -52,13 +52,13 @@ This project is written using the current latest stable versions of:
 
 Before we start coding, let's gather our tools and libraries. Here are the essential packages we'll use:
 
-* [**getX**](https://pub.dev/packages/get)**:** The Swiss Army knife for state management. (You can use any kind of state management you prefer to work with such as [**provider**](https://pub.dev/packages/provider) **or** [**flutter\_bloc**](https://pub.dev/packages/flutter_bloc))
+* [**getX**](https://pub.dev/packages/get)**:** The Swiss Army knife for state management. (You can use any kind of state management you prefer to work with such as [**provider**](https://pub.dev/packages/provider)**or**[**flutter\_bloc**](https://pub.dev/packages/flutter_bloc))
     
 * [**freezed**](https://pub.dev/packages/freezed)**:** A code generation package for creating immutable data models.
     
-* [**retrofit**](https://pub.dev/packages/retrofit) **&** [**dio**](https://pub.dev/packages/dio)**:** For handling HTTP requests.
+* [**retrofit**](https://pub.dev/packages/retrofit)**&**[**dio**](https://pub.dev/packages/dio)**:** For handling HTTP requests.
     
-* [**get\_it**](https://pub.dev/packages/get_it) **&** [**injectable**](https://pub.dev/packages/injectable)**:** For dependency injection.
+* [**get\_it**](https://pub.dev/packages/get_it)**&**[**injectable**](https://pub.dev/packages/injectable)**:** For dependency injection.
     
 * [**go\_router**](https://pub.dev/packages/go_router)**:** A declarative routing package that provides a convenient, URL-based API for navigating between different screens.
     
@@ -269,13 +269,17 @@ In the **lib/utils/resources** create a file and name it `data_state.dart` which
 import 'package:dio/dio.dart';
 
 abstract class DataState<T> {
-final T data;
-final DioError error;
-const DataState({this.data, this.error});
+    final T data;
+    final DioError error;
+    const DataState({this.data, this.error});
 }
-class DataSuccess<T> extends DataState<T> { const DataSuccess(T data): super(data: data);
+
+class DataSuccess<T> extends DataState<T> { 
+    const DataSuccess(T data): super(data: data);
 }
-class DataFailed<T> extends DataState<T> { const DataFailed (DioError error): super(error: error);
+
+class DataFailed<T> extends DataState<T> { 
+    const DataFailed (DioError error): super(error: error);
 }
 ```
 
