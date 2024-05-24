@@ -56,9 +56,9 @@ Before we start coding, let's gather our tools and libraries. Here are the essen
     
 * [**freezed**](https://pub.dev/packages/freezed)**:** A code generation package for creating immutable data models.
     
-* [**retrofit**](https://pub.dev/packages/retrofit)**&**[**dio**](https://pub.dev/packages/dio)**:** For handling HTTP requests.
+* [**retrofit**](https://pub.dev/packages/retrofit) **&** [**dio**](https://pub.dev/packages/dio)**:** For handling HTTP requests.
     
-* [**get\_it**](https://pub.dev/packages/get_it)**&**[**injectable**](https://pub.dev/packages/injectable)**:** For dependency injection.
+* [**get\_it**](https://pub.dev/packages/get_it) **&** [**injectable**](https://pub.dev/packages/injectable)**:** For dependency injection.
     
 * [**go\_router**](https://pub.dev/packages/go_router)**:** A declarative routing package that provides a convenient, URL-based API for navigating between different screens.
     
